@@ -1,6 +1,6 @@
 # Final Project - Clock+
 Developed by Alexander Jarvis s3607170
-Level attempted: PASS
+Level attempted: Credit
 Heroku link: TODO
 Heroku deployment log: TODO
 
