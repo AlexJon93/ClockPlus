@@ -4,7 +4,7 @@
         <% if city.name != 'Melbourne' %><h5><%= city.difference %></h5><% end %>
     </div>
     <div class="city-time col-md-2 offset-md-6">
-        <h1><%= city.get_longtime_string %></h1>
+        <h1><% time, indicator = clock city %><%= time %><small class='indicator'><%= indicator %></small></h1>
         <h5><%= mode city %></h5>
     </div>
 </div>

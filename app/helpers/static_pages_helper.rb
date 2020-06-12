@@ -11,4 +11,12 @@ module StaticPagesHelper
             return "<span class='personal'>#{fa_icon 'circle'}</span>".html_safe
         end
     end
+
+    def clock(city)
+        if session[:twentyfour].nil? or session[:twentyfour] == true
+            return city.get_longtime_string
+        else
+            return city.get_shorttime_string
+        end
+    end
 end

@@ -9,6 +9,10 @@ class City < ApplicationRecord
         return self.current_time.strftime "%H:%M"
     end
 
+    def get_shorttime_string
+        return self.current_time.strftime("%I:%M"), self.current_time.strftime("%P")
+    end
+
     def difference
         return "#{self.offset - 10}h"
     end
