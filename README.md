@@ -1,3 +1,9 @@
+# Final Project - Clock+
+Developed by Alexander Jarvis s3607170
+Level attempted: PASS
+Heroku link: TODO
+Heroku deployment log: TODO
+
 ### CHEATSHEET
 
 1. `docker-compose run web rails new . --force --no-deps --database=postgresql`
