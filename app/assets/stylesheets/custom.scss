@@ -1,0 +1,22 @@
+@import "bootstrap";
+
+$nuke-green: #98dd5c;
+
+html, body{
+    background-color: var(--dark);
+    color: white;
+}
+
+.header{
+    font-weight: bold;
+    margin: 0.5vh 1vw;
+    .showcase{
+        border-radius: 20px;
+        background-color: $nuke-green;
+        color: var(--dark) !important;
+        margin-right: 1vw;
+    }
+    .contact{
+        color: $nuke-green !important;
+    }
+}
