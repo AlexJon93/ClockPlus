@@ -14,6 +14,13 @@
             <%= yield %>
         </div>
         <div class="col-md-4">
+            <div class="theme-toggle">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary active">Dark</button>
+                    <button type="button" class="btn btn-secondary">Neon</button>
+                    <button type="button" class="btn btn-secondary">Light</button>
+                </div>
+            </div>
             <div class="custom-control custom-checkbox">
                 <input type='checkbox' class='custom-control-input' id='hour-box'>
                 <label class='custom-control-label' for='hour-box'>24-Hour Clock</label>

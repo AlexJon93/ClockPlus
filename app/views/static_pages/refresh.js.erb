@@ -1,0 +1,1 @@
+$('.city-main').html('<% @cities.each do |city| %><%= escape_javascript(render partial: "static_pages/partials/city", locals: {city: city}) %><% end %>')

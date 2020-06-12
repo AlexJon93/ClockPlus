@@ -12,4 +12,5 @@ document.addEventListener("turbolinks:load", ->
         })
     $('.cancel-btn').click (e) ->
         $('.search-field').val('')
+    # $('remove-icon').click (e) ->
 )

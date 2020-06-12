@@ -54,6 +54,7 @@ $indicator-font: rgba(153, 153, 153, 0.521);
 }
 
 .city{
+    position: relative;
     padding: 1vh 1vw;
     min-height: 10vh;
     border-bottom: 1px solid $city-line;
@@ -63,6 +64,18 @@ $indicator-font: rgba(153, 153, 153, 0.521);
     .indicator{
         vertical-align: top;
         color: $indicator-font;
+    }
+    .remove-icon{
+        display: none;
+    }
+    &:hover{
+        .remove-icon{
+            color: $indicator-font;
+            display: flex;
+            position: absolute;
+            top: 10px;
+            right: 5px;
+        }
     }
 }
 

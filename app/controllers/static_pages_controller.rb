@@ -10,6 +10,15 @@ class StaticPagesController < ApplicationController
     def add
     end
 
+    def remove
+        session[:list].delete(params[:item].to_i)
+        @cities = City.city_list(session[:list])
+        
+        respond_to do |format|
+            format.js {render 'static_pages/refresh'}
+        end
+    end
+
     def create
         city = City.find_by(name: params[:name])
         if city.nil?
@@ -20,11 +29,15 @@ class StaticPagesController < ApplicationController
         end
     end
 
-    def toggle_hour
+    def refresh
         @cities = City.city_list(session[:list])
-        session[:twentyfour] = params[:setting] == 'true'
         respond_to do |format|
             format.js
         end
+    end
+
+    def toggle_hour
+        session[:twentyfour] = params[:setting] == 'true'
+        redirect_to refresh_path
     end
 end

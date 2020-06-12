@@ -7,4 +7,5 @@
         <h2><% time, indicator = clock city %><%= time %><small class='indicator'><%= indicator %></small></h2>
         <h5><%= day city %> <%= mode city %></h5>
     </div>
+    <span class="delete"><%= link_to fa_icon('times'), remove_path(item: city.id), method: :delete, class: 'remove-icon', remote: true %></span>
 </div>

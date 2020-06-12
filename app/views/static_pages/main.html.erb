@@ -1,10 +1,12 @@
 <%= render layout: 'layouts/home' do %>
-    <% @cities.each do |city| %>
-        <%= render partial: 'static_pages/partials/city', locals: {city: city} %>
-    <% end %>
+    <div class="city-main">
+        <% @cities.each do |city| %>
+            <%= render partial: 'static_pages/partials/city', locals: {city: city} %>
+        <% end %>
+    </div>
     <%= link_to add_path do %>
         <div class="city-add">
-            <h2><%= fa_icon 'plus' %></h2>
+            <h2><% if session[:list].empty? %>Click <%= fa_icon 'plus' %> to add a city<% else %><%= fa_icon 'plus' %><% end %></h2>
         </div>
     <% end %>
 <% end %>
