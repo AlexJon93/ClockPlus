@@ -1,18 +1,7 @@
 @import "bootstrap";
 @import "font-awesome.css";
 
-$nuke-green: #98dd5c;
-$nuke-green-hover: #87c453;
-
-$brand-hover: rgba(255, 255, 255, 0.788);
-
-$footer: rgba(255, 255, 255, 0.185);
 $footer-height: 7vh;
-
-html, body{
-    background-color: var(--dark);
-    color: white;
-}
 
 body {
     margin-bottom: $footer-height;
@@ -23,21 +12,7 @@ body {
     margin: 0.5vh 1vw;
     .showcase{
         border-radius: 20px;
-        background-color: $nuke-green;
-        color: var(--dark) !important;
         margin-right: 1vw;
-        &:hover{
-            background-color: $nuke-green-hover;
-        }
-    }
-    .contact{
-        color: $nuke-green !important;
-        &:hover{
-            color: $nuke-green-hover !important;
-        }
-    }
-    .navbar-brand:hover{
-        color: $brand-hover;
     }
 }
 
@@ -49,7 +24,6 @@ body {
     width: 100%;
     height: $footer-height;
     bottom: 0;
-    background-color: $footer;
     .details{
         margin-left: 2vw;
     }
@@ -58,6 +32,5 @@ body {
     }
     a{
         margin-left: 0.5vw;
-        color: white;
     }
 }

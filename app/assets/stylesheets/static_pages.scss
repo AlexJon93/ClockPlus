@@ -1,15 +1,10 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$cityview-back: rgba(255, 255, 255, 0.1);
-$city-line: rgba(0, 0, 0, 0.5);
-
 $working: rgb(118, 160, 94);
 $overtime: rgb(211, 171, 86);
 $personal: rgb(255, 93, 93);
 $sleep: rgb(255, 255, 255);
-
-$indicator-font: rgba(153, 153, 153, 0.521);
 
 .city-content{
     .legend{
@@ -31,23 +26,28 @@ $indicator-font: rgba(153, 153, 153, 0.521);
     .personal{
         color: $personal;
     }
-    .custom-control{
-        padding-left: 3vw;
+    .options{
+        vertical-align: middle;
+        .custom-control, .theme-toggle{
+            margin-left: 3vw;
+        }
+
+        .theme-toggle{
+            margin-bottom: 2vh;
+        }
     }
 }
 
 .cityview{
-    background: $cityview-back;
     padding: 1vh 1vw;
+    border-radius: 5px;
     margin: 4vh auto;
     .city-add{
         display: flex;
         align-items: center;
         justify-content: center;
         min-height: 7vh;
-        color: white;
         &:hover{
-            color: $indicator-font;
             cursor: pointer;
         }
     }
@@ -57,30 +57,21 @@ $indicator-font: rgba(153, 153, 153, 0.521);
     position: relative;
     padding: 1vh 1vw;
     min-height: 10vh;
-    border-bottom: 1px solid $city-line;
     &:last-child{
         border: 0;
     }
     .indicator{
         vertical-align: top;
-        color: $indicator-font;
     }
     .remove-icon{
         display: none;
     }
     &:hover{
         .remove-icon{
-            color: $indicator-font;
             display: flex;
             position: absolute;
             top: 10px;
             right: 5px;
         }
-    }
-}
-
-.form-row{
-    .btn-link{
-        color: white;
     }
 }
