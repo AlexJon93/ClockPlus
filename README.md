@@ -1,35 +1,8 @@
 # Final Project - Clock+
-Developed by Alexander Jarvis s3607170
-Level attempted: Credit
-Heroku link: TODO
-Heroku deployment log: TODO
-
-### CHEATSHEET
-
-1. `docker-compose run web rails new . --force --no-deps --database=postgresql`
-2. `docker-compose build`
-3. `config/database.yml`
-
-```yml
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: db
-  username: alex
-  password:
-  pool: 5
-
-development:
-  <<: *default
-  database: myapp_development
-
-
-test:
-  <<: *default
-  database: myapp_test
+- Developed by Alexander Jarvis - s3607170
+- Level attempted: Distinction
+- Heroku link: https://intense-plateau-67732.herokuapp.com/
+- Heroku deployment log:
 ```
-
-4. `docker-compose up`
-5. `docker-compose run web rake db:create`
-6. hit `http://localhost:3000`
-7. `docker-compose down`
+TODO
+```
