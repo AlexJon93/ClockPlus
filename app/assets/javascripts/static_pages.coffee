@@ -10,4 +10,6 @@ document.addEventListener("turbolinks:load", ->
                 setting: this.checked
             }
         })
+    $('.cancel-btn').click (e) ->
+        $('.search-field').val('')
 )

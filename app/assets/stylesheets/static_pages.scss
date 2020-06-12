@@ -40,11 +40,22 @@ $indicator-font: rgba(153, 153, 153, 0.521);
     background: $cityview-back;
     padding: 1vh 1vw;
     margin: 4vh auto;
+    .city-add{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 7vh;
+        color: white;
+        &:hover{
+            color: $indicator-font;
+            cursor: pointer;
+        }
+    }
 }
 
 .city{
-    padding: 4vh 2vw;
-    min-height: 15vh;
+    padding: 1vh 1vw;
+    min-height: 10vh;
     border-bottom: 1px solid $city-line;
     &:last-child{
         border: 0;
@@ -52,5 +63,11 @@ $indicator-font: rgba(153, 153, 153, 0.521);
     .indicator{
         vertical-align: top;
         color: $indicator-font;
+    }
+}
+
+.form-row{
+    .btn-link{
+        color: white;
     }
 }

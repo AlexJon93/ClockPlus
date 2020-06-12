@@ -1,0 +1,23 @@
+<div class="main">
+    <div class="heading">
+        <h2 class='display-4 text-center'>Clock+</h2>
+        <h4 class='display-7 text-center text-muted'>Clock+ built by Alex Jarvis - alex.jon.jarvis@gmail.com - Pass - 4.30pm Monday</h4>
+    </div>
+    <div class="row city-content">
+        <div class="col-md-2 offset-md-2 legend">
+            <p>Business time <span class="work legend-icon"><%= fa_icon 'circle' %></span></p>
+            <p>Business overtime <span class="overtime legend-icon"><%= fa_icon 'circle' %></span></p>
+            <p>Personal time <span class="personal legend-icon"><%= fa_icon 'circle' %></span></p>
+            <p>Sleeping time <span class="sleep legend-icon"><%= fa_icon 'star' %></span></p>
+        </div>
+        <div class="cityview col-md-4">
+            <%= yield %>
+        </div>
+        <div class="col-md-4">
+            <div class="custom-control custom-checkbox">
+                <input type='checkbox' class='custom-control-input' id='hour-box'>
+                <label class='custom-control-label' for='hour-box'>24-Hour Clock</label>
+            </div>
+        </div>
+    </div>
+</div>

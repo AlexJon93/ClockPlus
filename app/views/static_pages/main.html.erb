@@ -1,21 +1,10 @@
-<div class="main">
-    <div class="heading">
-        <h1 class='display-3 text-center'>Clock+</h1>
-        <h3 class='display-7 text-center text-muted'>Clock+ built by Alex Jarvis - alex.jon.jarvis@gmail.com - Pass - 4.30pm Monday</h3>
-    </div>
-    <div class="row city-content">
-        <div class="col-md-2 offset-md-1 legend">
-            <p>Business time <span class="work legend-icon"><%= fa_icon 'circle' %></span></p>
-            <p>Business overtime <span class="overtime legend-icon"><%= fa_icon 'circle' %></span></p>
-            <p>Personal time <span class="personal legend-icon"><%= fa_icon 'circle' %></span></p>
-            <p>Sleeping time <span class="sleep legend-icon"><%= fa_icon 'star' %></span></p>
+<%= render layout: 'layouts/home' do %>
+    <% @cities.each do |city| %>
+        <%= render partial: 'static_pages/partials/city', locals: {city: city} %>
+    <% end %>
+    <%= link_to add_path do %>
+        <div class="city-add">
+            <h2><%= fa_icon 'plus' %></h2>
         </div>
-        <%= render 'static_pages/partials/cityview' %>
-        <div class="col-md-3">
-            <div class="custom-control custom-checkbox">
-                <input type='checkbox' class='custom-control-input' id='hour-box'>
-                <label class='custom-control-label' for='hour-box'>24-Hour Clock</label>
-            </div>
-        </div>
-    </div>
-</div>
+    <% end %>
+<% end %>
