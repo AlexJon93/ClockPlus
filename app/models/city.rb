@@ -1,5 +1,29 @@
 class City < ApplicationRecord
-    validates :name, presence: true
+    validates :name, presence: true, uniqueness: { case_sensitive: false }
+
+    def self.city_list(session_data)
+        cities = []
+        session_data.each do |item|
+            cities.push(City.find(item))
+        end
+
+        return cities
+    end
+
+    def self.populate_list
+        cities = []
+        id = City.find_by(name: 'Melbourne').id
+        cities.push(id)
+
+        for item in 0..1
+            while cities.include? id
+                id = City.all.sample.id
+            end
+            cities.push(id)
+        end
+                
+        return cities
+    end
 
     def current_time
         return Time.now.getlocal(self.offset.hours)

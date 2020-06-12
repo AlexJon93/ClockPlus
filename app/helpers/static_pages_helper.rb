@@ -21,12 +21,14 @@ module StaticPagesHelper
     end
 
     def day(city)
-        if city.current_time.day < Time.now.day
-            return 'yesterday'
-        elsif city.current_time.day > Time.now.day
-            return 'tomorrow'
-        else
-            return 'today'
-        end
+        day = Time.use_zone('Australia/Melbourne'){
+            if city.current_time.day < Time.zone.now.day
+                return 'yesterday'
+            elsif city.current_time.day > Time.zone.now.day
+                return 'tomorrow'
+            else
+                return 'today'
+            end
+        }
     end
 end

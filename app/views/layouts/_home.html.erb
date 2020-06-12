@@ -1,0 +1,31 @@
+<div class="main">
+    <div class="heading">
+        <h2 class='display-4 text-center'>Clock+</h2>
+        <h4 class='display-7 text-center text-muted'>Clock+ built by Alex Jarvis - alex.jon.jarvis@gmail.com - Pass - 4.30pm Monday</h4>
+    </div>
+    <div class="row city-content">
+        <div class="col-md-2 offset-md-2 legend align-self-center">
+            <p>Business time <span class="work legend-icon"><%= fa_icon 'circle' %></span></p>
+            <p>Business overtime <span class="overtime legend-icon"><%= fa_icon 'circle' %></span></p>
+            <p>Personal time <span class="personal legend-icon"><%= fa_icon 'circle' %></span></p>
+            <p>Sleeping time <span class="sleep legend-icon"><%= fa_icon 'star' %></span></p>
+        </div>
+        <div class="cityview col-md-4">
+            <%= yield %>
+        </div>
+        <div class="options col-md-4 align-self-center">
+            <div class="theme-toggle">
+                <h6>Color theme</h6>
+                <div class="btn-group" role="group">
+                    <button type="button" id='dark-theme' class="theme-btn btn btn-secondary" value='dark-theme'>Dark</button>
+                    <button type="button" id='neon-theme' class="theme-btn btn btn-secondary" value='neon-theme'>Neon</button>
+                    <button type="button" id='light-theme' class="theme-btn btn btn-secondary" value='light-theme'>Light</button>
+                </div>
+            </div>
+            <div class="custom-control custom-checkbox">
+                <input type='checkbox' class='custom-control-input' id='hour-box'>
+                <label class='custom-control-label' for='hour-box'>24-Hour Clock</label>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,5 +12,6 @@
  *
  *= require_tree .
  *= require_self
+ *= require dark-theme
  *= require font-awesome
  */

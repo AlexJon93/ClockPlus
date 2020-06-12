@@ -1,0 +1,74 @@
+.neon-theme{
+    $background: #05dfd7;
+
+    $base-font: #f35588;
+    $panel: #a3f7bf;
+    $highlights: #fff591;
+
+    html, body{
+        background-color: $background;
+        color: $base-font;
+    }
+
+    .header{
+        background-color: $panel;
+        .showcase{
+            background-color: $highlights;
+            color: $background !important;
+            &:hover{
+                background-color: $highlights;
+            }
+        }
+        .contact{
+            color: $base-font !important;
+            &:hover{
+                color: $highlights !important;
+            }
+        }
+        .navbar-brand{
+            color: $highlights;
+            &:hover{
+                color: $base-font;
+            }
+        }
+    }
+
+    .footer{
+        background-color: $panel;
+        a{
+            color: $base-font;
+        }
+        
+    }
+
+    .cityview{
+        background: $panel;
+        .city-add{
+            color: $base-font;
+            &:hover{
+                color: $highlights;
+            }
+        }
+    }
+
+    .city{
+        border-bottom: 1px solid $highlights;
+        .indicator{
+            color: $highlights;
+        }
+        &:hover{
+            .remove-icon{
+                color: $base-font;
+            }
+        }
+    }
+    .form-row{
+        .btn-link{
+            color: $base-font;
+        }
+    }
+
+    .hour-box{
+        color: $base-font;
+    }
+}

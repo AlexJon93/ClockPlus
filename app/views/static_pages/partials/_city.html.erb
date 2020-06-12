@@ -1,10 +1,11 @@
 <div class="city row">
-    <div class="city-name col-md-4">
-        <h1><%= city.name %></h1>
+    <div class="city-name col-md-6">
+        <h2><%= city.name %></h2>
         <% if city.name != 'Melbourne' %><h5><%= city.difference %></h5><% end %>
     </div>
-    <div class="city-time col-md-2 offset-md-6">
-        <h1><% time, indicator = clock city %><%= time %><small class='indicator'><%= indicator %></small></h1>
+    <div class="city-time col-md-3 offset-md-3">
+        <h2><% time, indicator = clock city %><%= time %><small class='indicator'><%= indicator %></small></h2>
         <h5><%= day city %> <%= mode city %></h5>
     </div>
+    <span class="delete"><%= link_to fa_icon('times'), remove_path(item: city.id), method: :delete, class: 'remove-icon', remote: true %></span>
 </div>
