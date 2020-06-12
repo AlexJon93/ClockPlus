@@ -1,1 +1,18 @@
-<h1>Hello World!</h1>
+<div class="main">
+    <div class="heading">
+        <h1 class='display-3 text-center'>Clock+</h1>
+        <h3 class='display-7 text-center text-muted'>Clock+ built by Alex Jarvis - alex.jon.jarvis@gmail.com - Pass - 4.30pm Monday</h3>
+    </div>
+    <div class="row city-content">
+        <div class="col-md-2 offset-md-1">
+            <p>Business time <span class="work"><%= fa_icon 'circle' %></span></p>
+            <p>Business overtime <span class="overtime"><%= fa_icon 'circle' %></span></p>
+            <p>Personal time <span class="personal"><%= fa_icon 'circle' %></span></p>
+            <p>Sleeping time <span class="sleep"><%= fa_icon 'star' %></span></p>
+        </div>
+        <%= render 'static_pages/partials/cityview' %>
+        <div class="col-md-3">
+            
+        </div>
+    </div>
+</div>

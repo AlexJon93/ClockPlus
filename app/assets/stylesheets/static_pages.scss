@@ -1,3 +1,40 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$cityview-back: rgba(255, 255, 255, 0.1);
+$city-line: rgba(0, 0, 0, 0.5);
+
+$working: rgb(118, 160, 94);
+$overtime: rgb(211, 171, 86);
+$personal: rgb(255, 93, 93);
+$sleep: rgb(255, 255, 255);
+
+.city-content{
+    .work{
+        color: $working;
+    }
+    .overtime{
+        color: $overtime;
+    }
+    .sleep{
+        color: $sleep;
+    }
+    .personal{
+        color: $personal;
+    }
+}
+
+.cityview{
+    background: $cityview-back;
+    padding: 1vh 1vw;
+    margin: 4vh auto;
+}
+
+.city{
+    padding: 4vh 2vw;
+    min-height: 15vh;
+    border-bottom: 1px solid $city-line;
+    &:last-child{
+        border: 0;
+    }
+}

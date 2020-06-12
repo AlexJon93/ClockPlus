@@ -1,5 +1,5 @@
 @import "bootstrap";
-@import "font-awesome";
+@import "font-awesome.css";
 
 $nuke-green: #98dd5c;
 $nuke-green-hover: #87c453;
@@ -7,10 +7,15 @@ $nuke-green-hover: #87c453;
 $brand-hover: rgba(255, 255, 255, 0.788);
 
 $footer: rgba(255, 255, 255, 0.185);
+$footer-height: 7vh;
 
 html, body{
     background-color: var(--dark);
     color: white;
+}
+
+body {
+    margin-bottom: $footer-height;
 }
 
 .header{
@@ -42,7 +47,7 @@ html, body{
     padding: 1vh 1vw;
     position: fixed;
     width: 100%;
-    height: 7vh;
+    height: $footer-height;
     bottom: 0;
     background-color: $footer;
     .details{
