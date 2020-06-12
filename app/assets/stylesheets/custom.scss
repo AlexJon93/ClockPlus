@@ -1,6 +1,12 @@
 @import "bootstrap";
+@import "font-awesome";
 
 $nuke-green: #98dd5c;
+$nuke-green-hover: #87c453;
+
+$brand-hover: rgba(255, 255, 255, 0.788);
+
+$footer: rgba(255, 255, 255, 0.185);
 
 html, body{
     background-color: var(--dark);
@@ -15,8 +21,38 @@ html, body{
         background-color: $nuke-green;
         color: var(--dark) !important;
         margin-right: 1vw;
+        &:hover{
+            background-color: $nuke-green-hover;
+        }
     }
     .contact{
         color: $nuke-green !important;
+        &:hover{
+            color: $nuke-green-hover !important;
+        }
+    }
+    .navbar-brand:hover{
+        color: $brand-hover;
+    }
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    padding: 1vh 1vw;
+    position: fixed;
+    width: 100%;
+    height: 7vh;
+    bottom: 0;
+    background-color: $footer;
+    .details{
+        margin-left: 2vw;
+    }
+    .socials{
+        margin-left: auto;
+    }
+    a{
+        margin-left: 0.5vw;
+        color: white;
     }
 }
